@@ -67,7 +67,17 @@ var content = {
 var template = handlebars.compile(source);
 var html = template(content);
 fs.writeFileSync("../views/homepage.handlebars", html);
-
+//=======================================================================
+var sources = fs.readFileSync('../views/layouts/AboutUs.handlebars', "utf8");
+var contents = {
+  title: "Nelisa Spaza Shop",
+  name: "Nelisa",
+  name2: "Xolani",
+  name3: "Nthabiseng"
+};
+var template = handlebars.compile(sources);
+var html6 = template(contents);
+fs.writeFileSync("../views/aboutus.handlebars", html6);
 
 //=======================================================================
 var source5= fs.readFileSync("../views/layouts/main.handlebars", "utf8");
