@@ -1,7 +1,7 @@
 var fs = require('fs'); //file system
 
 exports.week1Sales = function() {
-  var sales = fs.readFileSync('../CSV/week1.csv', "utf8");
+  var sales = fs.readFileSync('./CSV/week1.csv', "utf8");
   sales = sales.replace("Day,Date,stock item,No sold,Sales Price\n", "");
 
   var week1ItemsArray = sales.replace(/R/g,"").split('\n');
@@ -46,7 +46,7 @@ exports.week1Sales = function() {
 //WEEK 2
 
 exports.week2Sales = function(){
-var sales = fs.readFileSync('../CSV/week2.csv', "utf8");
+var sales = fs.readFileSync('./CSV/week2.csv', "utf8");
 sales = sales.replace("Day,Date,stock item,No sold,Sales Price\n", "");
 
 var itemsArray = sales.replace(/R/g, "").split('\n');
@@ -88,7 +88,7 @@ return weeklySales2;
 };
 //--------------------------------------------------------------------------------------------------------
 exports.week3Sales = function(){
-var sales = fs.readFileSync('../CSV/week3.csv', "utf8");
+var sales = fs.readFileSync('./CSV/week3.csv', "utf8");
 sales = sales.replace("Day,Date,stock item,No sold,Sales Price\n", "");
 
 var week3ItemsArray = sales.replace(/R/g, "").split('\n');
@@ -129,7 +129,7 @@ return weeklySales3;
 
 //-----------------------------------------------------------------------------------------------------
 exports.week4Sales = function(){
-var sales4 = fs.readFileSync('../CSV/week4.csv', "utf8");
+var sales4 = fs.readFileSync('./CSV/week4.csv', "utf8");
 sales4 = sales4.replace("Day,Date,stock item,No sold,Sales Price\n", "");
 
 var week4ItemsArray = sales4.replace(/R/g, "").split('\n');

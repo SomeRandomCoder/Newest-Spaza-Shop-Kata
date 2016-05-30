@@ -7,7 +7,7 @@ var weeklySales3 = weeklySales.week3Sales();
 var weeklySales4 = weeklySales.week4Sales();
 exports.mostProfitableCategory = function() {
 
-  var purchases = fs.readFileSync('../CSV/purchases.csv', "utf8");
+  var purchases = fs.readFileSync('./CSV/purchases.csv', "utf8");
   purchases = purchases.replace("Shop;Date;Item;Quantity;Cost;Total Cost", "").replace(/R/g, "");
   var processingArray = purchases.split('\n').join('.').split(";").join(".").split(".");
   // console.log(processingArray);
@@ -25,7 +25,7 @@ exports.mostProfitableCategory = function() {
   }
 //=================================================================
 
-  var category = fs.readFileSync('../CSV/catagories.csv', "utf8");
+  var category = fs.readFileSync('./CSV/catagories.csv', "utf8");
   category = category.replace("Product,Category\n", "");
   var processingArray2 = category.split('\n').join(".").split(',').join('.').split(".");
   var categories = [];

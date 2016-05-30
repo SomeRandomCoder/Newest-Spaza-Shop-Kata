@@ -10,7 +10,7 @@ var weeklySales4 = weeklySales.week4Sales;
 
 
 exports.categoryMap= function(){
-  var file = fs.readFileSync("../CSV/catagories.csv", "utf8");
+  var file = fs.readFileSync("./CSV/catagories.csv", "utf8");
   var files = file.replace(/Product,Category\n/g, "").replace(/\n/g, ",").split(",");
 
   category = file.replace("Product,Category\n", "");

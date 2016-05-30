@@ -9,7 +9,7 @@ var weeklySales4 = weeklySales.week4Sales();
 
 exports.mostProfitableProduct = function() {
 
-  var purchases = fs.readFileSync('../CSV/purchases.csv', "utf8");
+  var purchases = fs.readFileSync('./CSV/purchases.csv', "utf8");
 
   purchases = purchases.replace("Shop;Date;Item;Quantity;Cost;Total Cost", "").replace(/R/g, "");
   var processingArray = purchases.split('\n').join('.').split(";").join(".").split(".");
